@@ -1,6 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import dotenv from 'dotenv'
+import cors from 'cors' //for requests from different IP addresses
 
 const app = express()
 dotenv.config()
@@ -10,6 +11,10 @@ const PORT = process.env.PORT || 3001
 const DB_USER = process.env.DB_USER
 const DB_PASSWORD = process.env.DB_PASSWORD
 const DB_NAME = process.env.DB_NAME
+
+//Middleware
+app.use(cors())
+app.use(express.json())
 
 async function start() {
     try {
