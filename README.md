@@ -15,3 +15,7 @@ Then enter the following commands:
 - nvm use 18
 - npm install
 - npm run dev
+
+
+###To work with the server:
+- MongoDB Compass
