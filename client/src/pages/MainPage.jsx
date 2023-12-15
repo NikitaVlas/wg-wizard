@@ -2,7 +2,7 @@ import React from 'react';
 
 const MainPage = () => {
     return (
-        <div>
+        <div className="mt-4">
             MAIN
         </div>
     );

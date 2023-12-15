@@ -1,9 +1,11 @@
 import React from 'react';
+import Navbar from "../Navbar/Navbar.jsx";
 
-const Layout = () => {
+const Layout = ({children}) => {
     return (
         <div>
-            BAAM
+            <Navbar/>
+            {children}
         </div>
     );
 };

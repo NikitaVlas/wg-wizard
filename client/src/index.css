@@ -1,1 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    padding: 40px 120px;
+    background-color: floralwhite;
+}
