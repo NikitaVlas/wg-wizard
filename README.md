@@ -1,4 +1,4 @@
-To work with the client:
+###To work with the client:
 
 Choose the directory /client.
 Then enter the following commands:
@@ -6,7 +6,9 @@ Then enter the following commands:
 - yarn install
 - yarn run dev
 
-To work with the server:
+
+
+###To work with the server:
 
 Choose the directory /server.
 Then enter the following commands:
