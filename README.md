@@ -17,5 +17,5 @@ Then enter the following commands:
 - npm run dev
 
 
-###To work with the server:
+###To work with the DB:
 - MongoDB Compass
