@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
 import axios from '../../../utils/axios'
 
 const initialState = {
@@ -10,9 +10,9 @@ const initialState = {
 
 export const registerUser = createAsyncThunk(
     'auth/registerUser',
-    async ({ username, password }) => {
+    async ({username, password}) => {
         try {
-            const { data } = await axios.post('/auth/register', {
+            const {data} = await axios.post('/auth/register', {
                 username,
                 password,
             })
@@ -28,9 +28,9 @@ export const registerUser = createAsyncThunk(
 
 export const loginUser = createAsyncThunk(
     'auth/loginUser',
-    async ({ username, password }) => {
+    async ({username, password}) => {
         try {
-            const { data } = await axios.post('/auth/login', {
+            const {data} = await axios.post('/auth/login', {
                 username,
                 password,
             })
@@ -46,7 +46,7 @@ export const loginUser = createAsyncThunk(
 
 export const getMe = createAsyncThunk('auth/getMe', async () => {
     try {
-        const { data } = await axios.get('/auth/me')
+        const {data} = await axios.get('/auth/me')
         return data
     } catch (error) {
         console.log(error)
@@ -65,8 +65,8 @@ export const authSlice = createSlice({
         },
     },
     extraReducers: (builder) => {
-        // Register user
         builder
+            // Register user
             .addCase(registerUser.pending, (state) => {
                 state.isLoading = true
                 state.status = null
@@ -81,8 +81,8 @@ export const authSlice = createSlice({
                 state.status = action.payload.message
                 state.isLoading = false
             })
-        // Login user
 
+            // Login user
             .addCase(loginUser.pending, (state) => {
                 state.isLoading = true
                 state.status = null
@@ -97,7 +97,8 @@ export const authSlice = createSlice({
                 state.status = action.payload.message
                 state.isLoading = false
             })
-        //
+
+            //getMe
             .addCase(getMe.pending, (state) => {
                 state.isLoading = true
                 state.status = null
@@ -117,5 +118,5 @@ export const authSlice = createSlice({
 
 export const checkIsAuth = (state) => Boolean(state.auth.token)
 
-export const { logout } = authSlice.actions
+export const {logout} = authSlice.actions
 export default authSlice.reducer
