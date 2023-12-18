@@ -8,7 +8,7 @@ import authRoute from './routes/auth.js'
 const app = express()
 dotenv.config()
 
-//Constans
+//Constants
 const PORT = process.env.PORT || 3001
 const DB_USER = process.env.DB_USER
 const DB_PASSWORD = process.env.DB_PASSWORD
