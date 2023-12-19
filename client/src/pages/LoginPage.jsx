@@ -37,13 +37,13 @@ const LoginPage = () => {
                         <h1>Authorization</h1>
 
                         <div className="form-group mt-3">
-                            <label htmlFor="username">User name</label>
+                            <label htmlFor="username">Username</label>
                             <input
                                 type="text"
                                 id="username"
                                 value={username}
                                 onChange={(e) => setUsername(e.target.value)}
-                                placeholder="User name"
+                                placeholder="Username"
                                 className="form-control mt-2"
                             />
                         </div>

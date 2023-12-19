@@ -41,13 +41,13 @@ const RegisterPage = () => {
                         <h1>Registration</h1>
 
                         <div className="form-group mt-3">
-                            <label htmlFor="username">User name</label>
+                            <label htmlFor="username">Username</label>
                             <input
                                 type="text"
                                 value={username}
                                 onChange={e => setUsername(e.target.value)}
                                 id="username"
-                                placeholder="User name"
+                                placeholder="Username"
                                 className="form-control mt-2"
                             />
                         </div>
