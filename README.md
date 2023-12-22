@@ -19,3 +19,7 @@ Then enter the following commands:
 
 ###To work with the DB:
 - MongoDB Compass
+
+
+### Calendar plugin
+https://fullcalendar.io/docs
